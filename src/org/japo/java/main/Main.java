@@ -15,14 +15,26 @@
  */
 package org.japo.java.main;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author Bianca Antonela Glavan - biancaantonela.glavan.alum@iescamp.es
  */
-public class Main {
-    public static void main(String[] args) {
+
+public class Main {public static final Scanner SCN 
+        = new Scanner(System.in, "Windows-1252")
+                .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
+
+ public static void main(String[] args) {
         
-    
+String nombre;
+
+System.out.print("Me llamo..............");
+nombre=SCN.nextLine();
+
+
         
     }
     
