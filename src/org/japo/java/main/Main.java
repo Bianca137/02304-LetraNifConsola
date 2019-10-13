@@ -22,20 +22,31 @@ import java.util.Scanner;
  *
  * @author Bianca Antonela Glavan - biancaantonela.glavan.alum@iescamp.es
  */
+public class Main {
 
-public class Main {public static final Scanner SCN 
-        = new Scanner(System.in, "Windows-1252")
-                .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
+    public static final Scanner SCN
+            = new Scanner(System.in, "Windows-1252")
+                    .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
 
- public static void main(String[] args) {
-        
-String nombre;
+    public static void main(String[] args) {
 
-System.out.print("Me llamo..............");
-nombre=SCN.nextLine();
+        // Variable
+        char letraDNI;
 
+        // Cuarentena
+        try {
+            // Leer dato
+            System.out.print("Introduce la letra de tu DNI: ");
+            letraDNI = SCN.nextLine().charAt(0);
 
-        
+            // Mensaje
+            System.out.println("Letra DNI.........:" + letraDNI);
+
+        } catch (Exception e) {
+            // Mensaje
+            System.out.println("ERROR: Entrada incorrecta");
+        }
+
     }
-    
+
 }
